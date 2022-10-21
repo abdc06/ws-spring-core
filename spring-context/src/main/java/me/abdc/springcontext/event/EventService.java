@@ -10,4 +10,8 @@ public class EventService {
     public EventService(EventRepository eventRepository) {
         this.eventRepository = eventRepository;
     }
+
+    public EventRepository getEventRepository() {
+        return eventRepository;
+    }
 }

@@ -7,4 +7,8 @@ public class BookService {
     public BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
+
+    public BookRepository getBookRepository() {
+        return bookRepository;
+    }
 }
