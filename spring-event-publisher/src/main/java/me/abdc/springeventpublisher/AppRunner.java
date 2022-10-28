@@ -1,5 +1,6 @@
 package me.abdc.springeventpublisher;
 
+import me.abdc.springeventpublisher.event.AfterEvent;
 import me.abdc.springeventpublisher.event.BeforeEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -16,5 +17,6 @@ public class AppRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         eventPublisher.publishEvent(new BeforeEvent(this, 100));
+        eventPublisher.publishEvent(new AfterEvent(this, 200));
     }
 }
