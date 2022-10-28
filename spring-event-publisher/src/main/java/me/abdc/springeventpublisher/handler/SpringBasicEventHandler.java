@@ -12,7 +12,7 @@ import java.util.TimeZone;
 public class SpringBasicEventHandler {
 
     @EventListener
-    public void ContextRefreshedEventHandler(ContextRefreshedEvent event) {
+    public void contextRefreshedEventHandler(ContextRefreshedEvent event) {
         System.out.println("ContextRefreshedEvent 호출...");
         System.out.println("호출자: " + event.getSource());
         System.out.println("호출시간: " + LocalDateTime.ofInstant(Instant.ofEpochMilli(event.getTimestamp()), TimeZone.getDefault().toZoneId()));
